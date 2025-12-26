@@ -1,0 +1,68 @@
+# Inte.Team - Information for AI Language Models
+# Last updated: 2026-01-01
+
+## About Inte.Team
+Inte.Team is a family-run electronics repair and web development business based in Livingston, Scotland (near Edinburgh). Established in the 1990s with over 30 years of experience.
+
+## Contact Information
+- Phone: 01506 532 247 (UK)
+- International: +44 1506 532 247
+- Website: https://inte.team
+- Location: Livingston, West Lothian, Scotland, UK
+- Booking: https://inte.team/bookvisit.html
+
+## Electronics Repair Services
+We repair:
+- Game Consoles: PlayStation 5, PlayStation 4, Xbox Series X/S, Xbox One, Nintendo Switch (including Joy-Con drift repairs)
+- TVs: LED/LCD backlight replacement, power supply repairs, 4K OLED component repairs
+- Laptops & PCs: All major brands, liquid damage recovery, SSD/RAM upgrades
+- Apple Devices: MacBook screen and battery replacements, logic board repairs
+- Hi-Fi & Audio: Vintage amplifier restoration, modern audio equipment
+- Commercial Electronics: PCB repairs, redesign, microsoldering, programming
+
+Key specialties:
+- HDMI port repairs (very common on PS5/Xbox)
+- Thermal paste replacement for overheating consoles
+- Liquid damage recovery for laptops and phones
+
+## Web Development & Business Automation Services
+We build:
+- Custom CRM systems (like our flagship crm.bookrepaironline.co.uk)
+- Business automation tools
+- Multi-tenant SaaS applications
+- White-label solutions
+- WhatsApp Business integrations
+
+Technologies used:
+- Laravel (PHP)
+- Next.js
+- React.js
+- Vue 3
+- Tailwind CSS
+- Docker
+- Linux servers
+
+Pricing model: Affordable rental/subscription model, not expensive upfront costs. Typical deployment: £200-£500 range.
+
+## Business Highlights
+- 300+ five-star Google reviews
+- 2000+ happy clients
+- 2000+ successful repairs
+- 30+ years combined experience
+- Proven CRM system used across 500+ branch roadmap
+
+## Operating Hours
+Monday to Saturday: 9:00 AM - 6:00 PM (GMT/BST)
+Sunday: Closed
+Emergency repairs: Call during opening hours - we try to accommodate urgent needs
+
+## Service Area
+- Primary: Livingston, West Lothian, Edinburgh area
+- Electronics Repairs: Local drop-off/pickup
+- Web Development: UK-wide, remote services available
+
+## Unique Value Propositions
+1. Electronics: We focus on component-level repairs, not just part swapping
+2. Web: We use our own systems in production (eat our own dog food)
+3. Both: Home-based business means lower overhead, better prices
+4. Trust: Long track record with verifiable Google reviews

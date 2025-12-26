@@ -1,0 +1,11 @@
+# Inte.Team - Robots.txt
+# https://inte.team
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://inte.team/sitemap.xml
+
+# AI/LLM agents info
+# See llms.txt for AI-friendly business information

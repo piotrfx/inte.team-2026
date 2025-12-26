@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Visit or Call | Inte.Team Livingston</title>
+    <meta name="description" content="Book your electronics repair visit or free consultation with Inte.Team in Livingston. Easy online booking, email confirmation, emergency repairs available. Call 01506 532 247.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inte.team/bookvisit.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inte.team/bookvisit.html">
+    <meta property="og:title" content="Book a Visit | Inte.Team">
+    <meta property="og:description" content="Book your electronics repair or consultation. Easy online booking with email confirmation.">
+    <meta property="og:locale" content="en_GB">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* We add just a little extra CSS here for the booking layout */
+        .booking-layout {
+        padding: 120px 2rem 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .instruction-box {
+        max-width: 800px;
+        text-align: left;
+        margin-bottom: 3rem;
+        /* Matches your home page tiles exactly */
+        background: var(--glass);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        border-radius: 28px;
+        animation: none; 
+    }
+
+    .embed-holder {
+        width: 100%;
+        max-width: 1000px;
+        /* Changed from white to match your theme's glass style */
+        background: rgba(255, 255, 255, 0.03); 
+        backdrop-filter: blur(5px);
+        border-radius: 28px;
+        padding: 20px;
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* This ensures that if the embedded form is white, it doesn't bleed 
+       awkwardly into the rounded corners of your glass container */
+    .embed-holder iframe, 
+    .embed-holder embed {
+        border-radius: 15px;
+        background: white; /* Only the inner form stays white for readability */
+    }
+    </style>
+</head>
+<body class="booking-page">
+
+    <nav>
+    <div class="nav-left">
+        <a href="index.html" class="logo">I N T E . T E A M</a>
+        <a href="index.html" class="nav-link">HOME</a>
+    </div>
+    
+    <div class="nav-controls">
+        <div class="toggle-container">
+            <span>No Animations</span>
+            <label class="switch">
+                <input type="checkbox" id="motionToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="contact-info"><strong>01506 532 247</strong></div>
+    </div>
+</nav>
+
+    <main class="booking-layout">
+        <div class="content instruction-box">
+            <h1 style="color: var(--repair-accent);">Booking Your Visit/Call</h1>
+            
+            <p><strong>1. Fill in the form:</strong> Provide your details below to secure your slot.</p>
+            
+            <p><strong>2. Check your email:</strong> Look for a confirmation from <strong>Inte.Team</strong>. Please check your <strong>SPAM/JUNK</strong> folder if it doesn't arrive within 5 minutes.</p>
+            
+            <p><strong>3. Need an exception?</strong> If you can't find a slot or need urgent help, call us on <a href="tel:01506532247" style="color: var(--repair-accent); font-weight: bold;">01506 532 247</a> during opening hours. We always try to squeeze in emergency repairs!</p>
+        </div>
+
+        <div class="embed-holder">
+            <p style="color: #090931; text-align: center; padding: 50px;"><div id="form-ecdd1529-d1fa-48d5-82b5-1362536b46dc"></div>
+<script src="https://crm.bookrepaironline.co.uk/js/form-embed.js"></script>
+<script>
+  FormEmbed.render('ecdd1529-d1fa-48d5-82b5-1362536b46dc', {
+    container: '#form-ecdd1529-d1fa-48d5-82b5-1362536b46dc',
+    apiBase: 'https://crm.bookrepaironline.co.uk',
+    theme: 'dark'
+  });
+</script></p>
+        </div>
+    </main>
+
+    <footer>
+        (Private Home) at 43 Norman Rise, EH546LY Livingston | © 2026 Inte.Team
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
