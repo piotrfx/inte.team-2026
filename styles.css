@@ -11,9 +11,13 @@
 }
 
 /* */
-body, html { 
-    margin: 0; padding: 0; 
-    font-family: 'Segoe UI', Roboto, sans-serif; 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     min-height: 100%;
     background-color: var(--dark);
     color: var(--text-main);
@@ -205,11 +209,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero-container { flex-direction: column; }
+    .hero-container { flex-direction: column; width: 100%; }
     .split { min-height: 50vh; height: auto; width: 100%; padding: 1.5rem; }
     .split:hover { flex: 1 !important; }
 
     .content {
+        width: 100%;
         max-width: 100%;
         padding: 1.5rem;
         margin: 1rem 0;
