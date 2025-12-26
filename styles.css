@@ -206,5 +206,42 @@ footer {
 
 @media (max-width: 768px) {
     .hero-container { flex-direction: column; }
-    .split { height: 50vh; width: 100%; }
+    .split { min-height: 50vh; height: auto; width: 100%; padding: 1.5rem; }
+    .split:hover { flex: 1 !important; }
+
+    .content {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+    .content h1 { font-size: 1.8rem; }
+    .content p { font-size: 1rem; }
+
+    .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .map-container { height: 300px; }
+
+    footer { font-size: 0.9rem; padding: 1.5rem 1rem; }
+}
+
+@media (max-width: 480px) {
+    nav { padding: 0.8rem 1rem; }
+    .logo { font-size: 1rem; letter-spacing: 1px; }
+    .nav-left { gap: 0.5rem; }
+    .nav-link { padding: 0.3rem 0.5rem; font-size: 0.7rem; }
+
+    .nav-controls { gap: 0.5rem; }
+    .toggle-container span { display: none; }
+    .contact-info { font-size: 0.8rem; }
+
+    .split { padding: 1rem; min-height: 45vh; }
+    .content { padding: 1.2rem; }
+    .content h1 { font-size: 1.5rem; }
+
+    .stats-badge { font-size: 0.7rem; padding: 0.3rem 0.8rem; }
 }
