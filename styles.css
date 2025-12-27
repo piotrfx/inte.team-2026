@@ -235,12 +235,13 @@ footer {
 }
 
 @media (max-width: 480px) {
-    nav { padding: 0.8rem 1rem; }
+    nav { padding: 0.8rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
     .logo { font-size: 1rem; letter-spacing: 1px; }
     .nav-left { gap: 0.5rem; }
     .nav-link { padding: 0.3rem 0.5rem; font-size: 0.7rem; }
 
-    .nav-controls { gap: 0.5rem; }
+    .nav-controls { gap: 0.8rem; }
+    .toggle-container { display: flex; align-items: center; gap: 4px; }
     .toggle-container span { display: none; }
     .contact-info { font-size: 0.8rem; }
 
@@ -249,4 +250,11 @@ footer {
     .content h1 { font-size: 1.5rem; }
 
     .stats-badge { font-size: 0.7rem; padding: 0.3rem 0.8rem; }
+}
+
+@media (max-width: 360px) {
+    .nav-left { gap: 0.3rem; }
+    .nav-link { padding: 0.2rem 0.4rem; font-size: 0.65rem; }
+    .logo { font-size: 0.9rem; }
+    .contact-info { display: none; }
 }
