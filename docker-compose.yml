@@ -8,8 +8,14 @@ services:
     volumes:
       - ./:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - nginxpm_default
     healthcheck:
-      test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
       timeout: 10s
       retries: 3
+
+networks:
+  nginxpm_default:
+    external: true
