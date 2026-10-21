@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronics Repairs | PS5, Xbox, TV, Apple, Laptop Repair Livingston | Inte.Team</title>
-    <meta name="description" content="Professional electronics repairs in Livingston — consoles, TVs, laptops, Apple and Hi-Fi. Component-level diagnostics, 30+ years experience, 300+ 5-star reviews.">
+    <meta name="description" content="Electronics repairs in Livingston: consoles, TVs, laptops, Apple and Hi-Fi. Component-level diagnostics, 30+ years' experience, High-priority turnaround in 1–2 days.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://inte.team/electronicsrepairs.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inte.team/electronicsrepairs.html">
+    <meta property="og:title" content="Electronics Repairs | PS5, Xbox, TV, Apple, Laptop Repair Livingston | Inte.Team">
+    <meta property="og:description" content="Electronics repairs in Livingston: consoles, TVs, laptops, Apple and Hi-Fi. Component-level diagnostics, 30+ years' experience, High-priority turnaround in 1–2 days.">
+    <meta property="og:image" content="https://inte.team/og-image.png">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electronics Repairs | PS5, Xbox, TV, Apple, Laptop Repair Livingston | Inte.Team">
+    <meta name="twitter:description" content="Electronics repairs in Livingston: consoles, TVs, laptops, Apple and Hi-Fi. Component-level diagnostics, 30+ years' experience, High-priority turnaround in 1–2 days.">
+    <meta name="twitter:image" content="https://inte.team/og-image.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="tailwind.css?v=20261021">
+    <link rel="stylesheet" href="section-dock.css?v=20261021b">
+    <link rel="stylesheet" href="tailwind.css?v=20261021b">
     <style>
         :root { 
             --text-main: #0f172a; 
@@ -35,6 +46,32 @@
             transition: border-color 0.3s ease;
         }
         .engineering-card:hover { border-color: rgba(14,165,233,0.35); }
+        /* Partnership panel. Tall enough that the section dock can scroll it to the
+           top of the screen even though it is the last section on the page. */
+        .partner-panel {
+            position: relative; overflow: hidden;
+            display: flex; align-items: flex-start; justify-content: center;
+            text-align: center;
+            padding: clamp(3rem, 11vh, 7rem) 1.5rem 4rem;
+            min-height: max(440px, calc(100vh - 240px));
+            min-height: max(440px, calc(100svh - 240px));
+            border-radius: 3rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #0d1e35 url('partnership-handshake.webp') 52% 60% / cover no-repeat;
+        }
+        @supports (background-image: image-set(url('') type('image/avif'))) {
+            .partner-panel {
+                background-image: image-set(url('partnership-handshake.avif') type('image/avif'), url('partnership-handshake.webp') type('image/webp'));
+            }
+        }
+        /* Scrim: dark behind the title at the top, lighter lower down so the handshake shows */
+        .partner-panel::before {
+            content: ""; position: absolute; inset: 0;
+            background:
+                linear-gradient(180deg, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.78) 45%, rgba(15,23,42,0.45) 100%),
+                radial-gradient(ellipse at 25% 10%, rgba(59,130,246,0.3), transparent 60%);
+        }
+
         /* Turnaround tiers */
         .tier-row { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1rem; }
         .tier-row:last-of-type { margin-bottom: 0; }
@@ -162,7 +199,7 @@
 
     <main class="max-w-6xl mx-auto px-6 py-12">
         
-        <header class="text-center mb-16">
+        <header id="overview" data-dock="Overview" data-dock-icon="🏠" class="text-center mb-16">
             <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
                 Started in the 1990s | Livingston HQ
             </div>
@@ -215,7 +252,7 @@
         </div>
 
         <!-- Why We Do It -->
-        <section class="bg-white/5 rounded-[3rem] p-8 md:p-16 border border-white/10 mb-20">
+        <section id="why-we-do-it" data-dock="Why We Do It" data-dock-icon="💡" class="bg-white/5 rounded-[3rem] p-8 md:p-16 border border-white/10 mb-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-3xl font-black mb-6 text-white">Why We Do It.</h2>
@@ -242,7 +279,7 @@
         </section>
 
         <!-- Engineering Workflow -->
-        <section class="mb-20">
+        <section id="how-we-work" data-dock="How We Work" data-dock-icon="🔧" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Engineering Workflow</div>
                 <h2 class="text-3xl font-black text-white mb-3">Built to Minimise Human Error</h2>
@@ -328,7 +365,7 @@
         </section>
 
         <!-- Repair Journey -->
-        <section class="mb-20">
+        <section id="start-here" data-dock="Start Here" data-dock-icon="🧭" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Start Here</div>
                 <h2 class="text-3xl font-black text-white mb-3">What brings you here today?</h2>
@@ -382,7 +419,7 @@
         </section>
 
         <!-- 8-Step Mastery Process -->
-        <section id="process" class="mb-20">
+        <section id="process" data-dock="8-Step Process" data-dock-icon="🔄" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">The Process</div>
                 <h2 class="text-3xl font-black text-white mb-3">Our 8-Step Mastery Process</h2>
@@ -476,7 +513,7 @@
         </section>
 
         <!-- Turnaround Times -->
-        <section id="turnaround" class="mb-20">
+        <section id="turnaround" data-dock="Turnaround Times" data-dock-icon="⏱️" class="mb-20">
             <div class="text-center mb-10">
                 <div class="inline-block bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Turnaround Times</div>
                 <h2 class="text-3xl font-black text-white mb-3">How long will my repair take?</h2>
@@ -532,10 +569,14 @@
             </div>
         </section>
 
-        <section class="text-center py-12 border-t border-white/10">
-            <h2 class="text-2xl font-bold mb-4">Want to run your own Inte.Team bench?</h2>
-            <p class="text-slate-400 mb-8 max-w-xl mx-auto text-sm">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
-            <a href="partnership-info.html" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all">View Partnership Benefits →</a>
+        <!-- Partnership -->
+        <section id="partnership" data-dock="Partner With Us" data-dock-icon="🤝" class="partner-panel mt-28">
+            <div class="relative max-w-2xl">
+                <div class="inline-block bg-blue-500/15 text-blue-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-5">Partnership</div>
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-5">Want to run your own Inte.Team bench?</h2>
+                <p class="text-slate-300 md:text-lg leading-relaxed max-w-xl mx-auto mb-10">Whether you want to be your own boss or want the safety net of a team, we have a custom partnership model for you.</p>
+                <a href="partnership-info.html" class="inline-block bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all">View Partnership Benefits →</a>
+            </div>
         </section>
 
     </main>
@@ -677,6 +718,7 @@
             document.getElementById('process').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     </script>
+    <script src="section-dock.js?v=20261021b" defer></script>
     <script src="https://crm.bookrepaironline.co.uk/js/chat-widget.js" data-widget="xjwMkoge8ynYnssj94x3Ojpp" async></script>
 </body>
 </html>
