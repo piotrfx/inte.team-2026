@@ -23,7 +23,7 @@
     <meta name="twitter:image" content="https://inte.team/og-image.png">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261008">
 
     <script type="application/ld+json">
     {
@@ -187,6 +187,121 @@
             .referrals-grid { grid-template-columns: 1fr; }
             .referrals-section { padding: 0 1.25rem 3.5rem; }
         }
+
+        /* Community projects teaser */
+        .community-teaser {
+            padding: 0 1.25rem 3rem;
+            background: var(--dark);
+        }
+        .community-teaser-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(16,185,129,0.03);
+            border: 1px solid rgba(16,185,129,0.15);
+            border-radius: 28px;
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+        }
+        .community-eyebrow {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #34d399;
+            margin-bottom: 0.75rem;
+        }
+        .community-teaser h2 {
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 0.625rem;
+            line-height: 1.2;
+        }
+        .community-teaser-sub {
+            font-size: 0.86rem;
+            color: #64748b;
+            max-width: 520px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        .community-peek {
+            display: flex;
+            justify-content: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.75rem;
+        }
+        .community-chip {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+        .community-chip.is-next { color: #475569; border-style: dashed; }
+        @media (max-width: 480px) {
+            .community-teaser { padding: 0 1rem 2.5rem; }
+            .community-teaser-inner { padding: 1.75rem 1rem; }
+        }
+
+        /* Reality teaser */
+        .reality-teaser {
+            padding: 0 1.25rem 3rem;
+            background: var(--dark);
+        }
+        .reality-teaser-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 28px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .reality-eyebrow {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #475569;
+            margin-bottom: 0.75rem;
+        }
+        .reality-teaser h2 {
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 0.625rem;
+            line-height: 1.2;
+        }
+        .reality-teaser-sub {
+            font-size: 0.86rem;
+            color: #64748b;
+            max-width: 460px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+        .reality-peek {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.625rem;
+            max-width: 480px;
+            margin: 0 auto 1.5rem;
+        }
+        .rpc {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: left;
+        }
+        .rpc-icon { font-size: 1.25rem; margin-bottom: 0.35rem; }
+        .rpc-label { font-size: 0.78rem; font-weight: 800; color: #94a3b8; margin-bottom: 0.2rem; }
+        .rpc-desc  { font-size: 0.72rem; color: #475569; line-height: 1.55; }
+        @media (max-width: 480px) {
+            .reality-teaser { padding: 0 1rem 2.5rem; }
+            .reality-teaser-inner { padding: 1.5rem 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -194,9 +309,11 @@
     <nav aria-label="Main navigation">
         <div class="nav-left">
             <a href="index.html" class="logo">I N T E . T E A M</a>
-            <a href="electronicsrepairs.html" class="nav-link">REPAIRS</a>
-            <a href="repair-bookings.html" class="nav-link">BOOK</a>
-            <a href="membership.html" class="nav-link">MEMBERSHIP</a>
+            <div class="nav-links">
+                <a href="electronicsrepairs.html" class="nav-link">REPAIRS</a>
+                <a href="repair-bookings.html" class="nav-link">BOOK</a>
+                <a href="membership.html" class="nav-link">MEMBERSHIP</a>
+            </div>
         </div>
         <div class="nav-controls">
             <div class="toggle-container">
@@ -207,6 +324,7 @@
                 </label>
             </div>
             <div class="contact-info"><strong>01506 532 247</strong></div>
+            <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
         </div>
     </nav>
 
@@ -280,6 +398,28 @@
         </div>
     </section>
 
+    <!-- Reality teaser -->
+    <section class="reality-teaser" aria-label="Business reality check">
+        <div class="reality-teaser-inner">
+            <p class="reality-eyebrow">The Real Picture</p>
+            <h2>A website alone won't grow your business.</h2>
+            <p class="reality-teaser-sub">Whether you're launching something new or scaling an established brand, the journey looks very different. We lay it all out — honestly.</p>
+            <div class="reality-peek">
+                <div class="rpc">
+                    <div class="rpc-icon">🚀</div>
+                    <div class="rpc-label">Starting Out</div>
+                    <div class="rpc-desc">Marketing, SOPs, feedback loops, analytics — the iceberg hidden under your site.</div>
+                </div>
+                <div class="rpc">
+                    <div class="rpc-icon">🏆</div>
+                    <div class="rpc-label">Established Business</div>
+                    <div class="rpc-desc">Retention, loyalty, new products — how big brands grow without cold acquisition.</div>
+                </div>
+            </div>
+            <a href="business-reality.html" class="btn btn-web" style="margin-top: 0; padding: 0.9rem 2.25rem;">See the Full Picture &rarr;</a>
+        </div>
+    </section>
+
     <!-- Trusted referrals -->
     <section class="referrals-section" aria-label="Trusted referrals">
         <div class="referrals-inner">
@@ -314,6 +454,22 @@
         </div>
     </section>
 
+    <!-- Community projects teaser -->
+    <section class="community-teaser" aria-label="Community projects">
+        <div class="community-teaser-inner">
+            <p class="community-eyebrow">Giving Back, Digitally</p>
+            <h2>We build tools for the local community too.</h2>
+            <p class="community-teaser-sub">Beyond repairs and client work, we design and host directories for parts of the local economy the digital world usually overlooks — no subscriptions, no gatekeeping.</p>
+            <div class="community-peek">
+                <span class="community-chip">🌾 OpenFarm Scotland — live now</span>
+                <span class="community-chip">⚡ EcoEconomy — live now</span>
+                <span class="community-chip">🚗 Car Boot Sale Livingston — now collecting pledges</span>
+                <span class="community-chip is-next">🔧 Local Garages — in planning</span>
+            </div>
+            <a href="community-projects.html" class="btn btn-web" style="margin-top: 0; padding: 0.9rem 2.25rem;">See Our Community Projects &rarr;</a>
+        </div>
+    </section>
+
     <!-- Google Map -->
     <section class="map-section">
         <div class="map-container">
@@ -325,11 +481,10 @@
                 title="Inte.Team location — 43 Norman Rise, Livingston EH54 6LY">
             </iframe>
         </div>
+        <a class="btn btn-review" href="https://g.page/r/CabMSTaTNaQNEBM/review" target="_blank" rel="noopener noreferrer" aria-label="Leave us a review on Google (opens in a new tab)"><span aria-hidden="true">★</span> Review us on Google</a>
     </section>
 
-    <footer>
-        43 Norman Rise, EH54 6LY Livingston (Private Home — By Appointment Only) | © <span class="yr"></span> Inte.Team
-    </footer>
+    <!--#include virtual="/partials/footer.html" -->
 
     <script src="script.js"></script>
 </body>
